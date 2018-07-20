@@ -1,0 +1,22 @@
+{
+  "dnsname": "{{ clusterid }}",
+  "nodes": {
+    "hbase_node0": {
+      "docker_image": "docker-registry.cesga.es:5000/hbase:1.1.13",
+      "docker_opts": " ",
+      "cpu": {{ opts['cpu'] }},
+      "mem": {{ opts['mem'] }},
+      "disks": {
+        "disk0": {
+          "destination": "/data"
+        }
+      },
+      "networks": {
+        "eth0": {"type": "dynamic", "networkname": "bigdata"}
+      }
+    }
+  },
+  "services": {
+      "hbase": { "nodes": ["hbase_node0"] }
+  }
+}

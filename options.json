@@ -1,0 +1,14 @@
+{
+    "required": {
+    },
+    "optional": {
+        "cpu": 2,
+        "mem": 4096
+    },
+    "advanced": {
+    },
+    "descriptions": {
+        "cpu": "Number of CPUs per node",
+        "mem": "Memory per node (MB)"
+    }
+}
